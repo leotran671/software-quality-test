@@ -1,15 +1,10 @@
 export class User {
-    email: string;
-    firstName: string;
-    lastName: string;
-    age: number;
-  
-    constructor(email: string, firstName: string, lastName: string, age: number) {
-      this.email = email;
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.age = age;
-    }
+  constructor(
+    public email?: string,
+    public firstName?: string,
+    public lastName?: string,
+    public age?: number
+  ) {}
 
     isValid(): boolean {
       const emailPattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -19,6 +14,7 @@ export class User {
         this.firstName != '' &&
         this.lastName != '' &&
         this.age != null &&
+      typeof this.age === 'number' && // Vérifier que l'âge est un nombre
         this.age >= 13
       );
     }

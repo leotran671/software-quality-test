@@ -69,7 +69,12 @@ describe('AppComponent', () => {
       const user = new User('john.doe@example.com', 'John', '', 20);
       expect(user.isValid()).toBe(false);
     });
-  
+
+    it('should not create a user with missing age', () => {
+      const user = new User('john.doe@example.com', 'John', 'Doe');
+      expect(user.isValid()).toBe(false);
+    });
+
     it('should not create a user with age below 13', () => {
       const user = new User('john.doe@example.com', 'John', 'Doe', 10);
       expect(user.isValid()).toBe(false);
