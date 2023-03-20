@@ -26,12 +26,12 @@ describe('HyppopotamusComponent', () => {
       const Hyppo = new Hyppopatamus('Hyppo', 1501, 32);
       expect(Hyppo.swim()).toBe(1500.7);
     });
-    it('Hyppo1 should win against Hyppo2', () => {
+    it('fight test Hyppo1 should win against Hyppo2', () => {
       const h1 = new Hyppopatamus('h1', 1650, 32);
       const h2 = new Hyppopatamus('h2', 1800, 29);
       expect(h1.fight(h2)).toBe(h1);
     });
-    it('Should convert hippotamus object into string', () => {
+    it('toString test Should convert hippotamus object into string', () => {
       const Hyppo = new Hyppopatamus('Hyppo', 1501, 32);
       expect(Hyppo.toString()).toBe("Hippopotame Hyppo : poids = 1501 kg, taille des défenses = 32 cm");
     });

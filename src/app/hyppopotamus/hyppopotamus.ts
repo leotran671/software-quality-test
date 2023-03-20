@@ -39,8 +39,8 @@ export class Hyppopatamus {
                 this.swim();
                 this.swim();
             }
-            console.log(this.toString());
         }
+        return this.toString();
     }
 
     toString(): string {
